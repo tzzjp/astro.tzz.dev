@@ -1,0 +1,21 @@
+---
+import ViewTransitions from "astro/components/ViewTransitions.astro";
+import Navigation from "@/components/Navigation.astro";
+import Footer from "@/components/Footer.astro";
+import '@/styles/globals.css';
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzz.Dev</title>
+    <ViewTransitions />
+</head>
+<body>
+    <Navigation />
+    <h1>Tzz.Dev</h1>
+    <slot />
+    <Footer />
+</body>
+</html>

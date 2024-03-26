@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const allPosts = await getCollection('posts');
+---
+<BaseLayout>
+	<p>在这里，我将分享我的学习 Astro 的之旅。</p>
+	<ul>
+		{allPosts.map((post) => (
+			<li>
+				<a href={`/posts/${post.slug}`}>{post.data.title}</a>
+			</li>
+		))}
+	</ul>
+</BaseLayout>
